@@ -14,3 +14,19 @@ var fibonacci = function (n){
 };
 
 console.log(fibonacci(4));
+console.log(fibonacci(7));
+
+var gcd = function( a , b ){
+    while ( b != 0 ) { 
+	t = b;
+	b = a % b; 
+	a = t;
+    };
+    return a;
+};
+
+console.log(gcd(25,625));
+console.log(gcd(625,25));
+console.log(gcd(49,56));
+
+var list = [ 'Kelly', 'Tiffany', 'Jason', 'Andy', 'Lena', 'Britney', 'Jared' ];

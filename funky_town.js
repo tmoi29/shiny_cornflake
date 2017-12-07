@@ -14,3 +14,25 @@ var fibonacci = function (n){
 };
 
 console.log(fibonacci(4));
+
+var gcd = function (a,b){
+    var x = Math.max(a,b);
+    var y = Math.min(a,b);
+    if (a == 0 || b == 0)
+	return x;
+    if (x%y == 0)
+	return y;
+    else
+	return gcd(y,x%y); 
+};
+
+console.log(gcd(78,42));
+
+var students = ["Tiff", "Kelly", "Joyce", "Jen", "Helen", "Eugenio"];
+
+var randomStudent = function (){
+    var x = Math.round(Math.random() * students.length) - 1;
+    return students[x];
+};
+
+console.log(randomStudent());

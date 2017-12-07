@@ -4,6 +4,7 @@
 //HW15 -- Sequential Progression
 //2017-12-07
 
+//====FIBONACCI====
 var fibonacci = function (n){
     if (n == 0)
 	return 0;
@@ -13,8 +14,12 @@ var fibonacci = function (n){
 	return fibonacci(n-1) + fibonacci(n-2);
 };
 
+//====TESTS====
 console.log(fibonacci(4));
+console.log(fibonacci(13));
 
+
+//====GCD====
 var gcd = function (a,b){
     var x = Math.max(a,b);
     var y = Math.min(a,b);
@@ -26,13 +31,21 @@ var gcd = function (a,b){
 	return gcd(y,x%y); 
 };
 
+//====TESTS====
 console.log(gcd(78,42));
+console.log(gcd(25,625));
+console.log(gcd(625,25));
+console.log(gcd(49,56));
 
-var students = ["Tiff", "Kelly", "Joyce", "Jen", "Helen", "Eugenio"];
+
+//====randomStudent====
+
+var students = ["Tiff", "Kelly", "Joyce", "Jen", "Helen", "Eugenio", 'Jason', 'Andy', 'Lena', 'Britney', 'Jared'];
 
 var randomStudent = function (){
-    var x = Math.round(Math.random() * students.length) - 1;
+    var x = Math.round(Math.random() * (students.length - 1));
     return students[x];
 };
 
+//====TESTS====
 console.log(randomStudent());

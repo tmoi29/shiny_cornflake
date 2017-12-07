@@ -50,16 +50,43 @@ var randomStudent = function (){
 //====TESTS====
 console.log(randomStudent());
 
-//======================================================
+
+//=====================FOR THE BUTTONS=========================
 
 
-var buttonCallback = function(e){
-    console.log("\n\nhere comes a person...");
+//======================= fibonacci 10 =================
+
+var abuttonCallback = function(e){
+    console.log("\n\nlemme get uhhhhhh 55");
+    console.log(fibonacci(10));
+    console.log("\n\nhere comes 'this'...");
+    console.log(this);
+};
+
+var a = document.getElementById("a");
+a.addEventListener('click', abuttonCallback);
+
+//====================== random student ====================
+
+var bbuttonCallback = function(e){
+    console.log("\n\nHere comes a buddy...");
     console.log(randomStudent());
     console.log("\n\nhere comes 'this'...");
     console.log(this);
 };
 
 var b = document.getElementById("b");
-b.addEventListener('click', buttonCallback);
+b.addEventListener('click', bbuttonCallback);
+
+
+//======================== gcd 64 56 =========================
+var cbuttonCallback = function(e){
+    console.log("\n\nhere comes the cube root of 512 !!");
+    console.log(gcd(64, 56));
+    console.log("\n\nhere comes 'this'...");
+    console.log(this);
+};
+
+var c = document.getElementById("c");
+c.addEventListener('click', cbuttonCallback);
 

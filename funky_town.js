@@ -49,3 +49,17 @@ var randomStudent = function (){
 
 //====TESTS====
 console.log(randomStudent());
+
+//======================================================
+
+
+var buttonCallback = function(e){
+    console.log("\n\nhere comes a person...");
+    console.log(randomStudent());
+    console.log("\n\nhere comes 'this'...");
+    console.log(this);
+};
+
+var b = document.getElementById("b");
+b.addEventListener('click', buttonCallback);
+

@@ -50,32 +50,39 @@ var randomStudent = function (){
 //====TESTS====
 console.log(randomStudent());
 
-//======================================================
 
-var buttonCallbackA = function(e){
-    console.log("\n\nhere comes the fib number... expecting 3");
-    console.log(fibonacci(4));
+//=====================FOR THE BUTTONS=========================
+
+
+//======================= fibonacci 10 =================
+
+var abuttonCallback = function(e){
+    console.log("\n\nlemme get uhhhhhh 55");
+    console.log(fibonacci(10));
 };
 
 var a = document.getElementById("a");
-a.addEventListener('click', buttonCallbackA);
+a.addEventListener('click', abuttonCallback);
 
-var buttonCallbackB = function(e){
-    console.log("\n\nhere comes the GCD...expecting 125");
-    console.log(gcd(125,625));
-    console.log("\n\nit should work the other way around too!");
-    console.log(gcd(625,125));
-};
+//====================== random student ====================
 
-var b = document.getElementById("b");
-b.addEventListener('click', buttonCallbackB);
-
-
-var buttonCallbackC = function(e){
-    console.log("\n\nhere comes a person...");
+var bbuttonCallback = function(e){
+    console.log("\n\nHere comes a buddy...");
     console.log(randomStudent());
 };
 
+var b = document.getElementById("b");
+b.addEventListener('click', bbuttonCallback);
+
+
+//======================== gcd 64 56 =========================
+var cbuttonCallback = function(e){
+    console.log("\n\nhere comes the cube root of 512 !!");
+    console.log(gcd(64, 56));
+    console.log("\n\nit should work the other way around too!");
+    console.log(gcd(56, 64));
+};
+
 var c = document.getElementById("c");
-c.addEventListener('click', buttonCallbackC);
+c.addEventListener('click', cbuttonCallback);
 

@@ -52,14 +52,30 @@ console.log(randomStudent());
 
 //======================================================
 
+var buttonCallbackA = function(e){
+    console.log("\n\nhere comes the fib number... expecting 3");
+    console.log(fibonacci(4));
+};
 
-var buttonCallback = function(e){
-    console.log("\n\nhere comes a person...");
-    console.log(randomStudent());
-    console.log("\n\nhere comes 'this'...");
-    console.log(this);
+var a = document.getElementById("a");
+a.addEventListener('click', buttonCallbackA);
+
+var buttonCallbackB = function(e){
+    console.log("\n\nhere comes the GCD...expecting 125");
+    console.log(gcd(125,625));
+    console.log("\n\nit should work the other way around too!");
+    console.log(gcd(625,125));
 };
 
 var b = document.getElementById("b");
-b.addEventListener('click', buttonCallback);
+b.addEventListener('click', buttonCallbackB);
+
+
+var buttonCallbackC = function(e){
+    console.log("\n\nhere comes a person...");
+    console.log(randomStudent());
+};
+
+var c = document.getElementById("c");
+c.addEventListener('click', buttonCallbackC);
 
